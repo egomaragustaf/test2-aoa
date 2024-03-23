@@ -45,8 +45,8 @@ function HeaderLarge() {
           </li>
         ))}
         <li>
-          <Button variant="outline" className="w-36">
-            Login
+          <Button variant="outline" className="w-36" asChild>
+            <Link href={"/login"}>Login</Link>
           </Button>
         </li>
       </ul>
