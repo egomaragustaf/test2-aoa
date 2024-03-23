@@ -62,8 +62,8 @@ function PricingCard({
 }
 
 const CheckItem = ({ text }: { text: string }) => (
-  <div className="flex gap-2">
-    <CheckCircle2 size={18} className="my-auto text-[#0366fd]" />
+  <div className="flex gap-4">
+    <CheckCircle2 className="w-6 h-6 my-auto text-[#0366fd]" />
     <p className="pt-0.5 text-zinc-700 dark:text-zinc-300 text-sm">{text}</p>
   </div>
 );

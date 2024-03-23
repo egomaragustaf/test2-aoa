@@ -13,7 +13,7 @@ export function About() {
           <b className="p-2 leading-normal flex text-center text-3xl">
             Welcome to KeDa – your ultimate business companion!
           </b>
-          <ul className="text-[#0366fd] text-base space-y-2 font-semibold">
+          <ul className="text-[#0366fd] text-sm lg:text-base space-y-2 font-semibold">
             <li className="flex gap-2">
               <CircleCheck className="h-6 w-6 text-green-600" />
               Simplify your entrepreneurial journey.
