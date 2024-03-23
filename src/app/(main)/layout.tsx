@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 
 import { HeroBackground } from "./_components/hero-background";
-import { About } from "./_components/about-landing";
+import { About } from "./_components/section-about";
 
 export default function MainLayout({
   className,

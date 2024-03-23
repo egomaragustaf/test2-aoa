@@ -19,7 +19,7 @@ export default function HomePage() {
         </p>
       </div>
       <Image
-        src={"/landing-page/chart.svg"}
+        src={"/assets/chart.svg"}
         alt="chart"
         width={200}
         height={200}
