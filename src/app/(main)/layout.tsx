@@ -13,7 +13,7 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full mx-auto flex min-h-screen flex-col px-2">
+    <div className="max-w-screen-xl mx-auto flex min-h-screen flex-col px-2">
       <HeroBackground />
       <Header />
       <main className="flex-1">{children}</main>

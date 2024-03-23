@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HomePage() {
   return (
     <>
-      <div className="flex flex-col text-center lg:grid lg:grid-cols-8  mt-20">
+      <div className="flex flex-col text-center lg:grid lg:grid-cols-8 mt-20 mb-20">
         <div className="lg:col-span-3" />
         <p className="lg:col-span-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
