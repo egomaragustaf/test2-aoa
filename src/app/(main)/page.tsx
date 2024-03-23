@@ -1,4 +1,3 @@
-import { HeroBackground } from "./_components/hero-background";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -14,8 +13,8 @@ export default function HomePage() {
       </div>
       <div className="flex flex-col text-center lg:grid lg:grid-cols-8  mt-10 lg:mt-20">
         <p className="lg:col-span-4 italic">
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi,
-          maiores."
+          &quot;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi,
+          maiores.&quot;
         </p>
       </div>
       <Image

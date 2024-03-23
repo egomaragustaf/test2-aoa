@@ -5,7 +5,6 @@ import Link from "next/link";
 import { IconMenu2 } from "@tabler/icons-react";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
 import { navigation } from "@/configs/navigation";
 
 export function NavbarMenu() {

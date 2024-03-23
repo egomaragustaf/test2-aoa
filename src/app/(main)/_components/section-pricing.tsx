@@ -118,7 +118,7 @@ export function Pricing() {
           Choose Your Plan
         </h1>
         <p className="max-w-2xl text-center">
-          Let's choose the package that make your business management cool,
+          Let&apos;s choose the package that make your business management cool,
           simple, and downright awesome.
         </p>
         <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-8 mt-8">

@@ -1,11 +1,11 @@
 "use client";
 
-import Link, { LinkProps } from "next/link";
 import { IconCodeCircle2 } from "@tabler/icons-react";
+import Link from "next/link";
 
 import useScroll from "@/hooks/use-scroll-position";
 import { Button } from "@/components/ui/button";
-import { NavItem, navigation } from "@/configs/navigation";
+import { navigation } from "@/configs/navigation";
 import { cn } from "@/lib/utils";
 import { NavbarMenu } from "../shared/navbar-menu";
 

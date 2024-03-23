@@ -28,8 +28,9 @@ export function About() {
             </li>
           </ul>
           <p className="text-base text-center">
-            Let's make business management cool, simple, and downright awesome.
-            Join us and let's rock the world of entrepreneurship together!
+            Let&apos;s make business management cool, simple, and downright
+            awesome. Join us and let&apos;s rock the world of entrepreneurship
+            together!
           </p>
         </blockquote>
         <Image
