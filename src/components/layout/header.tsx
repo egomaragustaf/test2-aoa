@@ -25,7 +25,7 @@ export function Header() {
               "text-black": scrolled,
             }
           )}>
-          <IconCodeCircle2 />
+          <IconCodeCircle2 className="w-8 h-8" />
           Home
         </span>
       </Link>
