@@ -1,20 +1,28 @@
 "use client";
 
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 import { IconCodeCircle2 } from "@tabler/icons-react";
 
 import useScroll from "@/hooks/use-scroll-position";
 import { Button } from "@/components/ui/button";
-import { navigation } from "@/configs/navigation";
+import { NavItem, navigation } from "@/configs/navigation";
 import { cn } from "@/lib/utils";
+import { NavbarMenu } from "../shared/navbar-menu";
 
 export function Header() {
-  const scrolled = useScroll(20);
+  return (
+    <>
+      <HeaderLarge />
+    </>
+  );
+}
 
+function HeaderLarge() {
+  const scrolled = useScroll(20);
   return (
     <nav
       className={cn(
-        "sticky top-0 z-40 items-center justify-between gap-2 py-6 transition-colors lg:flex",
+        "sticky top-0 z-40 items-center justify-between gap-2 py-6 transition-colors flex",
         { "bg-background/75 backdrop-blur-lg": scrolled }
       )}>
       <Link href="/">
@@ -29,6 +37,7 @@ export function Header() {
           Home
         </span>
       </Link>
+
       <ul className="hidden lg:flex items-center gap-14">
         {navigation.map((item) => (
           <li key={item.name} className="text-xl font-bold">
@@ -41,6 +50,15 @@ export function Header() {
           </Button>
         </li>
       </ul>
+      <HeaderSmall />
+    </nav>
+  );
+}
+
+function HeaderSmall() {
+  return (
+    <nav className="sticky top-0 z-20 flex items-center justify-between gap-2 p-2 transition-colors lg:hidden">
+      <NavbarMenu />
     </nav>
   );
 }
