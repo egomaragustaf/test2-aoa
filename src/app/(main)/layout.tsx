@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { HeroBackground } from "./_components/hero-background";
 import { About } from "./_components/section-about";
 import { Pricing } from "./_components/section-pricing";
+import { Contact } from "./_components/section-contact";
 
 export default function MainLayout({
   className,
@@ -17,6 +18,7 @@ export default function MainLayout({
       <main className={cn("flex-1", className)}>{children}</main>
       <About />
       <Pricing />
+      <Contact />
       <Footer />
     </div>
   );
