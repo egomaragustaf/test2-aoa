@@ -44,7 +44,7 @@ export function Contact() {
             loading="lazy"
           />
 
-          <h2>Jakarta Office</h2>
+          <h2 className="font-bold">Jakarta Office</h2>
           <p className="text-xs max-w-xs">
             Jl. Kamboja No.76 4 7 4, RT.4/RW.7, Kota Bambu Utara, Kec. Palmerah,
             Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11420
