@@ -27,7 +27,7 @@ function PricingCard({
   actionLabel,
 }: PricingProps) {
   return (
-    <Card className="w-72 flex flex-col justify-between py-1 mx-auto sm:mx-0">
+    <Card className="w-80 flex flex-col justify-between py-1 mx-auto sm:mx-0 hover:border-[#0366fd] transition duration-500">
       <div>
         <CardHeader className="pb-8 pt-4">
           <CardTitle className="text-zinc-700 dark:text-zinc-300 text-lg">
@@ -63,7 +63,7 @@ function PricingCard({
 
 const CheckItem = ({ text }: { text: string }) => (
   <div className="flex gap-4">
-    <CheckCircle2 className="w-6 h-6 my-auto text-[#0366fd]" />
+    <CheckCircle2 className="w-4 h-4 my-auto text-[#0366fd]" />
     <p className="pt-0.5 text-zinc-700 dark:text-zinc-300 text-sm">{text}</p>
   </div>
 );

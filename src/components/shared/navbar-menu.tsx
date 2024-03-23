@@ -6,6 +6,7 @@ import { IconMenu2 } from "@tabler/icons-react";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { navigation } from "@/configs/navigation";
+import { Button } from "@/components/ui/button";
 
 export function NavbarMenu() {
   const [open, setOpen] = useState(false);
@@ -35,6 +36,11 @@ export function NavbarMenu() {
               </Link>
             </li>
           ))}
+          <li>
+            <Button variant="outline" className="w-36" asChild>
+              <Link href={"/login"}>Login</Link>
+            </Button>
+          </li>
         </ul>
       </SheetContent>
     </Sheet>
