@@ -5,7 +5,9 @@ import { CircleCheck } from "lucide-react";
 
 export function About() {
   return (
-    <section className="w-full min-h-screen mt-40 h-96 flex flex-row lg:flex-col items-center justify-center space-y-20">
+    <section
+      className="w-full min-h-screen mt-40 flex flex-row lg:flex-col items-center justify-center space-y-20 bg-slate-100"
+      id="about">
       <div className="max-w-7xl flex flex-col lg:flex-row items-center gap-4 lg:space-x-40">
         <blockquote className="max-w-lg space-y-4">
           <b className="p-2 leading-normal flex text-center text-3xl">

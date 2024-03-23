@@ -110,7 +110,9 @@ export function Pricing() {
   ];
 
   return (
-    <section className="w-full min-h-screen flex flex-row lg:flex-col items-center justify-center gap-4">
+    <section
+      className="w-full mt-20 lg:mt-40 min-h-screen flex flex-row lg:flex-col items-center justify-center gap-4 pb-20 border-b shadow-lg"
+      id="pricing">
       <div className="flex flex-col w-full items-center justify-center gap-4">
         <h1 className="p-2 leading-normal flex text-center text-3xl font-bold">
           Choose Your Plan

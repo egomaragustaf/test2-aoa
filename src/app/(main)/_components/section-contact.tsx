@@ -7,7 +7,9 @@ import { Textarea } from "@/components/ui/textarea";
 
 export function Contact() {
   return (
-    <section className="w-full mt-20 lg:mt-40 min-h-screen flex flex-col items-center justify-center gap-4">
+    <section
+      className="w-full mt-20 min-h-screen flex flex-col items-center justify-center gap-4"
+      id="contact">
       <h1 className="p-2 leading-normal flex text-center text-3xl font-bold">
         Contact Us Now
       </h1>
