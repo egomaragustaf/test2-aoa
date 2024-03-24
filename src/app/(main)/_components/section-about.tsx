@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { CircleCheck } from "lucide-react";
 
 const goals = [
   "- Simplify your entrepreneurial journey.",
@@ -28,8 +27,8 @@ export function About() {
             business field of companies, communities, and society.
           </p>
           <ul className="text-[#0366fd] text-sm lg:text-base space-y-2 font-semibold">
-            {goals.map((goal) => (
-              <li>{goal}</li>
+            {goals.map((goal, index) => (
+              <li key={index}>{goal}</li>
             ))}
           </ul>
         </blockquote>
