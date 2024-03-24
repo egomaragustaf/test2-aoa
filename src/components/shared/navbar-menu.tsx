@@ -37,8 +37,8 @@ export function NavbarMenu() {
             </li>
           ))}
           <li>
-            <Button variant="outline" className="w-36" asChild>
-              <Link href={"/login"}>Login</Link>
+            <Button variant="outline" className="w-36 text-[#0366fd]" asChild>
+              <Link href={"/login"}>LOGIN</Link>
             </Button>
           </li>
         </ul>
