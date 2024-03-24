@@ -13,14 +13,16 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="max-w-screen-xl mx-auto flex min-h-screen flex-col px-2">
+    <div className="w-full mx-auto flex min-h-screen flex-col px-2">
       <HeroBackground />
       <Header />
-      <main className="flex-1">{children}</main>
-      <About />
-      <Pricing />
-      <Contact />
-      <Footer />
+      <main className="w-full flex flex-col space-y-40 lg:space-y-20">
+        {children}
+        <About />
+        <Pricing />
+        <Contact />
+        <Footer />
+      </main>
     </div>
   );
 }

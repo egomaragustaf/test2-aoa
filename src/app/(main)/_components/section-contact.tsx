@@ -32,20 +32,20 @@ export function Contact() {
             <Label htmlFor="message">Your Enquiries</Label>
             <Textarea id="message" placeholder="Your Enquiries" />
           </div>
-          <Button>Submit</Button>
+          <Button variant="default">Submit</Button>
         </form>
 
-        <div className="flex flex-col gap-4 px-2 lg:px-0">
+        <div className="flex flex-col gap-4 px-2 lg:px-0 items-center justify-center">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.619476868206!2d106.80037687418154!3d-6.181656893805805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f68a5bebb8c1%3A0x3ebef4ed851778db!2sPT.%20Altech%20Omega%20Andalan!5e0!3m2!1sid!2sid!4v1711218458813!5m2!1sid!2sid"
-            width="400"
-            height="300"
+            width="350"
+            height="250"
             style={{ border: "0" }}
             loading="lazy"
           />
 
           <h2 className="font-bold">Jakarta Office</h2>
-          <p className="text-xs max-w-xs">
+          <p className="text-xs max-w-xs text-center">
             Jl. Kamboja No.76 4 7 4, RT.4/RW.7, Kota Bambu Utara, Kec. Palmerah,
             Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11420
           </p>

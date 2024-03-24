@@ -8,12 +8,12 @@ import {
 
 export function Footer() {
   return (
-    <div className="bg-slate-100 mt-20 pt-20">
+    <div className="bg-slate-200 mt-20 pt-20">
       <div className="max-w-7xl w-full mx-auto px-6 sm:px-8 lg:px-16 grid grid-rows-6 sm:grid-rows-1 grid-flow-row sm:grid-flow-col grid-cols-3 sm:grid-cols-12 gap-4">
         <div className="row-span-2 sm:col-span-4 col-start-1 col-end-4 sm:col-end-5 flex flex-col items-start ">
           <IconBrandInstagram className="h-8 w-auto mb-6" />
           <p className="mb-4">
-            <strong className="font-medium">KeDa</strong> is your ultimate
+            <strong className="font-medium">KeDa Tech</strong> is your ultimate
             business companion!.
           </p>
           <div className="flex w-full mt-2 mb-8 -mx-2">
@@ -29,7 +29,7 @@ export function Footer() {
           </div>
           <p className="text-gray-400">
             {" "}
-            &copy;{new Date().getFullYear()} - KeDa
+            &copy;{new Date().getFullYear()} - KeDa Tech
           </p>
         </div>
         <div className=" row-span-2 sm:col-span-2 sm:col-start-7 sm:col-end-9 flex flex-col">
@@ -53,7 +53,7 @@ export function Footer() {
           <p className="text-black-600 mb-4 font-medium text-lg">Engage</p>
           <ul className="text-black-500">
             <li className="my-2 hover:text-[#0366fd] cursor-pointer transition-all">
-              KeDa ?{" "}
+              KeDa Tech ?{" "}
             </li>
             <li className="my-2 hover:text-[#0366fd] cursor-pointer transition-all">
               FAQ{" "}

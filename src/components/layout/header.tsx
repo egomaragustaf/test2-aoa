@@ -22,7 +22,7 @@ function HeaderLarge() {
   return (
     <nav
       className={cn(
-        "sticky top-0 z-40 items-center justify-between gap-2 py-6 transition-colors flex",
+        "sticky top-2 z-40 items-center justify-between gap-2 py-4 pl-4 pr-6 transition-colors flex rounded-xl",
         { "bg-background/75 backdrop-blur-lg": scrolled }
       )}>
       <Link href="/">
@@ -57,7 +57,7 @@ function HeaderLarge() {
 
 function HeaderSmall() {
   return (
-    <nav className="sticky top-0 z-20 flex items-center justify-between gap-2 p-2 transition-colors lg:hidden">
+    <nav className="sticky top-0 z-20 flex items-center justify-between gap-2 transition-colors lg:hidden">
       <NavbarMenu />
     </nav>
   );
