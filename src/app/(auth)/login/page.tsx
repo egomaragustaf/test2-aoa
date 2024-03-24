@@ -8,7 +8,7 @@ export default function LoginPage() {
       <div className="w-full md:w-[700px] h-[400px] flex bg-gray-100 shadow-2xl rounded-3xl">
         <section className="form w-full md:w-[350px] h-full p-4">
           <form className="w-full h-full flex flex-col items-center justify-center gap-4">
-            <h2 className="text-center font-bold w-full py-2 text-[#0366fd]">
+            <h2 className="text-center font-bold w-full py-2 text-[#0366fd] text-2xl">
               Login
             </h2>
             <div className="w-full flex flex-col gap-2">
@@ -47,10 +47,11 @@ export default function LoginPage() {
         </section>
         <section className="hidden md:inline w-[350px] h-full">
           <div className="w-full h-full flex flex-col justify-center items-center gap-4 bg-primary text-white rounded-l-[150px] rounded-r-3xl">
-            <h2 className="text-center text-4xl font-bold">Hello!</h2>
-            <p className="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-              corporis!
+            <h2 className="text-center text-2xl font-bold">
+              Welcome to KeDa Tech!
+            </h2>
+            <p className="text-center lg:col-span-4 italic">
+              &quot;We listen and understand your business needs.&quot;
             </p>
           </div>
         </section>
