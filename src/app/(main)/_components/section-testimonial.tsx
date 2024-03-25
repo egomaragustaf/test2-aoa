@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { IconStarFilled } from "@tabler/icons-react";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { getScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const testimonis = [
   {
@@ -43,8 +46,24 @@ const testimonis = [
 ];
 
 export function Testimonial() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const ctrls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      ctrls.start("visible");
+    }
+  }, [ctrls, isInView]);
+
   return (
-    <div className="w-full mt-20 lg:mt-40 min-h-screen flex flex-row lg:flex-col items-center justify-center gap-4 pb-20 border-b shadow-lg">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={ctrls}
+      variants={getScrollAnimation}
+      aria-hidden="true"
+      className="w-full mt-20 lg:mt-40 min-h-screen flex flex-row lg:flex-col items-center justify-center gap-4 pb-20 border-b shadow-lg">
       <div className="flex flex-col w-full items-center justify-center gap-4">
         <h1 className="p-2 leading-normal flex text-center text-3xl font-bold">
           Trusted by Thousands of Happy Customer
@@ -83,12 +102,12 @@ export function Testimonial() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="flex w-full items-center justify-center gap-6 lg:my-6">
+          <div className="flex w-full items-center justify-center gap-6 my-4 lg:my-6">
             <CarouselPrevious />
             <CarouselNext />
           </div>
         </Carousel>
       </div>
-    </div>
+    </motion.div>
   );
 }
