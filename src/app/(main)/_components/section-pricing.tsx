@@ -1,5 +1,8 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,6 +13,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
+import {
+  getScrollAnimation,
+  getScrollCard,
+} from "@/hooks/use-scroll-animation";
 
 interface PricingProps {
   title: string;
@@ -68,6 +75,16 @@ const CheckItem = ({ text }: { text: string }) => (
 );
 
 export function Pricing() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const ctrls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      ctrls.start("visible");
+    }
+  }, [ctrls, isInView]);
+
   const plans = [
     {
       title: "TIER 1 / Basic",
@@ -109,7 +126,12 @@ export function Pricing() {
   ];
 
   return (
-    <section
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={ctrls}
+      variants={getScrollAnimation}
+      aria-hidden="true"
       className="w-full mt-20 lg:mt-40 min-h-screen flex flex-row lg:flex-col items-center justify-center gap-4 pb-20 border-b shadow-lg"
       id="pricing">
       <div className="flex flex-col w-full items-center justify-center gap-4">
@@ -120,12 +142,18 @@ export function Pricing() {
           Let&apos;s choose the package that make your business management cool,
           simple, and downright awesome.
         </p>
-        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-8 mt-8">
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={ctrls}
+          variants={getScrollCard}
+          aria-hidden="true"
+          className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-8 mt-8">
           {plans.map((plan) => {
             return <PricingCard key={plan.title} {...plan} />;
           })}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.div>
   );
 }

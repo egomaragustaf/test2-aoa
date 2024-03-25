@@ -1,13 +1,32 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { getScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export function Contact() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const ctrls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      ctrls.start("visible");
+    }
+  }, [ctrls, isInView]);
+
   return (
-    <section
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={ctrls}
+      variants={getScrollAnimation}
+      aria-hidden="true"
       className="w-full mt-20 min-h-screen flex flex-col items-center justify-center gap-4"
       id="contact">
       <h1 className="p-2 leading-normal flex text-center text-3xl font-bold">
@@ -51,6 +70,6 @@ export function Contact() {
           </p>
         </div>
       </div>
-    </section>
+    </motion.div>
   );
 }

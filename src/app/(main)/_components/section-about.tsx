@@ -1,6 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { getScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const goals = [
   "- Simplify your entrepreneurial journey.",
@@ -9,11 +12,27 @@ const goals = [
 ];
 
 export function About() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const ctrls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      ctrls.start("visible");
+    }
+  }, [ctrls, isInView]);
+
   return (
     <section
       className="w-full min-h-screen flex flex-row lg:flex-col items-center justify-center lg:space-y-20 bg-slate-100 py-20 lg:py-0"
       id="about">
-      <div className="max-w-7xl flex flex-col lg:flex-row items-center text-center lg:text-start gap-10 lg:gap-20">
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={ctrls}
+        variants={getScrollAnimation}
+        aria-hidden="true"
+        className="max-w-7xl flex flex-col lg:flex-row items-center text-center lg:text-start gap-10 lg:gap-20">
         <blockquote className="max-w-lg space-y-6">
           <b className="leading-normal text-3xl">KeDa Tech</b>
           <p className="text-muted-foreground">
@@ -38,7 +57,7 @@ export function About() {
           width={400}
           height={400}
         />
-      </div>
+      </motion.div>
     </section>
   );
 }
