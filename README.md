@@ -1,26 +1,42 @@
+## KeDa Tech
+
+### Large Screen
+
+<div align="center"><img src="public/screenshot/large-screen.png" /></div>
+
+### Small Screen
+
+<div align="center"><img src="public/screenshot/small-screen.png" /></div>
+
 ## Tech Stack
 
 See the complete and categorized list in the [reasons and benefits](./src/docs/STACK.md) to tech stack including things to consider to use.
 
-## Getting Started
+## Setup
 
-First, run the development server:
+1. Clone the repo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```sh
+   git clone https://github.com/egomaragustaf/test2-aoa.git
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Go to the project folder
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```sh
+   cd test2-aoa
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Install packages
+
+   ```sh
+   pnpm i
+   ```
+
+4. Run the app locally
+
+   ```sh
+   pnpm dev
+   ```
 
 ## Learn More
 
