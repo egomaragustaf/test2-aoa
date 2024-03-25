@@ -6,6 +6,7 @@ import { About } from "./_components/section-about";
 import { Pricing } from "./_components/section-pricing";
 import { Contact } from "./_components/section-contact";
 import { Testimonial } from "./_components/section-testimonial";
+import { Clients } from "./_components/section-clients";
 
 export default function MainLayout({
   children,
@@ -20,6 +21,7 @@ export default function MainLayout({
         {children}
         <About />
         <Pricing />
+        <Clients />
         <Testimonial />
         <Contact />
         <Footer />
