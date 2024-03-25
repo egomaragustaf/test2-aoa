@@ -1,6 +1,6 @@
 ## Tech Stack
 
-See the complete and categorized list in the [reasons and benefits](./docs/STACK.md) to tech stack including things to consider to use.
+See the complete and categorized list in the [reasons and benefits](./src/docs/STACK.md) to tech stack including things to consider to use.
 
 ## Getting Started
 
