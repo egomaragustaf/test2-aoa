@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 
@@ -6,6 +5,7 @@ import { HeroBackground } from "./_components/hero-background";
 import { About } from "./_components/section-about";
 import { Pricing } from "./_components/section-pricing";
 import { Contact } from "./_components/section-contact";
+import { Testimonial } from "./_components/section-testimonial";
 
 export default function MainLayout({
   children,
@@ -20,6 +20,7 @@ export default function MainLayout({
         {children}
         <About />
         <Pricing />
+        <Testimonial />
         <Contact />
         <Footer />
       </main>
