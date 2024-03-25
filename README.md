@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Tech Stack
+
+See the complete and categorized list in the [reasons and benefits](./docs/STACK.md) to tech stack including things to consider to use.
 
 ## Getting Started
 
